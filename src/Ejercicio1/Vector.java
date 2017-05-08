@@ -4,13 +4,13 @@ public class Vector {
 
 	Punto a;
 	Punto b;
-	int distancia;
+	Double distancia;
 	
-	public Vector(Punto A,Punto B,int Distancia)
+	public Vector(Punto A,Punto B)
 	{
 		this.a = A;
 		this.b = B;
-		this.distancia = Distancia;
+		this.distancia = A.ObtenerDistanciaDesde(B);
 	}
 	
 	public Punto getA()
@@ -31,5 +31,10 @@ public class Vector {
 	public void setB(Punto B)
 	{
 		this.b = B;
+	}
+	
+	public Double getDistancia()
+	{
+		return this.distancia;
 	}
 }

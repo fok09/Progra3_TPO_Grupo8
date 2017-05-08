@@ -28,5 +28,10 @@ public class Punto {
 	public void setY(int y) {
 		this.y = y;
 	}
+	
+	public double ObtenerDistanciaDesde(Punto p)
+	{
+		return Math.sqrt((this.x - p.x)^2 + (this.y - p.y)^2);
+	}
 }
 
