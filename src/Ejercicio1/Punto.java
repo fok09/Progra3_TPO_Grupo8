@@ -31,7 +31,7 @@ public class Punto {
 	
 	public double ObtenerDistanciaDesde(Punto p)
 	{
-		return Math.sqrt((this.x - p.x)^2 + (this.y - p.y)^2);
+		return Math.sqrt(Math.pow(this.x - p.x,2) + Math.pow(this.y - p.y,2));
 	}
 }
 

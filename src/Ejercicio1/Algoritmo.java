@@ -14,6 +14,10 @@ public class Algoritmo {
 		
 		System.out.println("PuntoA ("+V.getA().x+","+V.getA().y+") - PuntoB ("+V.getB().x+","+V.getB().y+") - Dist "+V.getDistancia());
 		
+		V = FuerzaBruta(p);
+		
+		System.out.println("PuntoA ("+V.getA().x+","+V.getA().y+") - PuntoB ("+V.getB().x+","+V.getB().y+") - Dist "+V.getDistancia());
+		
 		/*for(int i = 0 ; i<50 ; i++)
 		{
 			Double x = Math.random()*100;
@@ -33,8 +37,7 @@ public class Algoritmo {
 		if (s.length == 0 || s.length == 1) {
 			//V = null;
 			int infPos = (int) Double.POSITIVE_INFINITY;
-			int infNeg = (int) Double.NEGATIVE_INFINITY;
-			V = new Vector(new Punto(infPos,infPos),new Punto(infNeg,infNeg));
+			V = new Vector(new Punto(infPos,infPos),new Punto(0,0));
 		} else {
 			if (s.length == 2) {
 				V = new Vector(s[0], s[1]);
@@ -148,4 +151,21 @@ public class Algoritmo {
 		return p;
 	}
 
+	public static Vector FuerzaBruta(Punto[] sp)
+	{
+		int infPos = (int) Double.POSITIVE_INFINITY;
+		Vector V = new Vector(new Punto(infPos,infPos),new Punto(0,0));
+		Vector auxV;
+		
+		for(int i = 0 ; i < sp.length ; i++)
+			for(int j = i+1 ; j < sp.length ; j++)
+			{
+				auxV = new Vector(sp[i],sp[j]);
+				if(auxV.distancia < V.distancia)
+					V = auxV;
+			}
+				
+		return V;		
+	}
+	
 }
