@@ -1,7 +1,8 @@
 1- El ordenamiento está permitido como lo hice yo con las librerías de Array.
 2- Al momento de colocar el contador, dijo que lo pongamos en las sentencias importantes, por ejemplo, cada vez que se hace una recursividad.
 3- Para crear el unit test no tenemos que hacerlo al azar (al momento de entregar) así es más facil para corregir.
-
+			Lo del random al momento de generar los puntos lo hice a proposito no para entregarlo sino por el hecho de que así detectamos 
+			cosas que tal vez no contemplamos en un ambiente cerrado. Pero si para entregarlo si dejamos algo fijo
 
 Propuesta del profe para resolver el problema
 1- Ordenar Puntos por la ordenada X.(done)
