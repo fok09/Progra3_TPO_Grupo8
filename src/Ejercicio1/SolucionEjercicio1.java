@@ -1,4 +1,4 @@
-package ejercicio1;
+package Ejercicio1;
 
 public class SolucionEjercicio1 {
 Punto punto1;
