@@ -37,4 +37,9 @@ public class Vector {
 	{
 		return this.distancia;
 	}
+	
+	public String toString()
+	{
+		return "A:"+getA().toString()+" - B:"+getB().toString()+" -> "+getDistancia();
+	}
 }
