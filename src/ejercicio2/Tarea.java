@@ -25,5 +25,8 @@ public void setFin(int fin) {
 	this.fin = fin;
 }
 
+public int duracion(){
+	return this.fin - this.inicio;
+}
 
 }
