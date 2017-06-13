@@ -2,7 +2,7 @@ package ejercicio4;
 
 public class ElementoMochila {
 int peso;
-int ganacia;
+int ganancia;
 
 
 public int getPeso() {
@@ -11,17 +11,17 @@ public int getPeso() {
 public void setPeso(int peso) {
 	this.peso = peso;
 }
-public int getGanacia() {
-	return ganacia;
+public int getGanancia() {
+	return ganancia;
 }
-public void setGanacia(int ganacia) {
-	this.ganacia = ganacia;
+public void setGanancia(int ganancia) {
+	this.ganancia = ganancia;
 }
 
-public ElementoMochila(int peso, int ganacia) {
+public ElementoMochila(int peso, int ganancia) {
 	super();
 	this.peso = peso;
-	this.ganacia = ganacia;
+	this.ganancia = ganancia;
 }
 
 
