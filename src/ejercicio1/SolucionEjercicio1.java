@@ -36,6 +36,10 @@ public void setInstrucciones(int instrucciones) {
 	this.instrucciones = instrucciones;
 }
 
+public Double getVector()
+{
+	return this.punto1.ObtenerDistanciaDesde(this.punto2);
+}
 
 
 }

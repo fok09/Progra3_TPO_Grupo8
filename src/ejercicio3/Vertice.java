@@ -1,7 +1,7 @@
 package ejercicio3;
 
 public class Vertice {
-String nombre;
+private String nombre;
 
 
 

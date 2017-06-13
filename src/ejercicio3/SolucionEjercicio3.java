@@ -4,6 +4,11 @@ public class SolucionEjercicio3 {
 int aristaSum;
 int instrucciones;
 
+public SolucionEjercicio3()
+{
+	this.aristaSum = this.instrucciones = 0;
+}
+
 public SolucionEjercicio3(int aristaSum, int instrucciones) {
 	super();
 	this.aristaSum = aristaSum;

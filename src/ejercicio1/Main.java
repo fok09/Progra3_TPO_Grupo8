@@ -4,59 +4,51 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Algoritmo {
+public class Main {
 
-	public static void main(String[] args) {
+	public static SolucionEjercicio1 Ejercicio1(Punto[] p) {
 		
-		Punto[] p = ObtenerSecuencia();
-		p = OrdernarPuntosX(p);
-
-		Vector V = PuntosMasCercanos(p);
-
+		SolucionEjercicio1 sol;
 		
-		System.out.println(V.toString());
-		V = FuerzaBruta(p);
-
-		System.out.println(V.toString());
-
-		
-	}
-
-	public static Vector PuntosMasCercanos(Punto s[]) {
-		
-		Vector V;
-		
-		if(s.length <= 3)
-			V = FuerzaBruta(s);
+		if(p.length <= 3)
+		{
+			Vector v = FuerzaBruta(p);
+			sol = new SolucionEjercicio1(v.getA(),v.getB(),1);
+		}
 		else
 		{
-			Punto SI[] = Arrays.copyOfRange(s, 0, (s.length / 2));
-			Punto SD[] = Arrays.copyOfRange(s, s.length / 2, s.length);
+			Punto SI[] = Arrays.copyOfRange(p, 0, (p.length / 2));
+			Punto SD[] = Arrays.copyOfRange(p, p.length / 2, p.length);
 
 			Double Xmd =  (((double)SI[SI.length-1].x+(double)SD[0].x)/2);
 
-			Vector VI = PuntosMasCercanos(SI);
-			Vector VD = PuntosMasCercanos(SD);
+			SolucionEjercicio1 SolI = Ejercicio1(SI);
+			SolucionEjercicio1 SolD = Ejercicio1(SD);
 			
-			V = minVector(VI, VD);
+			sol = minVector(SolI, SolD);
+			
+			sol.instrucciones = SolI.instrucciones + SolD.instrucciones;
 			
 			ArrayList<Punto> lst = new ArrayList<Punto>();
-			for(Punto p : s)
-				if(p.getX() >= Xmd-V.getDistancia() && p.getX() <= Xmd+V.getDistancia())
-					lst.add(p);
+			for(Punto pto : p)
+				if(pto.getX() >= Xmd-sol.getVector() && pto.getX() <= Xmd+sol.getVector())
+					lst.add(pto);
 			Punto SM[] = new Punto[lst.size()];
 			SM = OrdernarPuntosY(lst.toArray(SM));
 
 			for (int i = 0 ; i<SM.length-1 ; i++)
-				if(SM[i+1].getY()-SM[i].getY() < V.getDistancia())
-					V = minVector(V, new Vector(SM[i],SM[i+1]));			
+				if(SM[i+1].getY()-SM[i].getY() < sol.getVector())
+					sol = minVector(sol, new SolucionEjercicio1(SM[i],SM[i+1],0));			
 		}
-		return V;
+		
+		return sol;
+		
+		
 	}
-
-	public static Vector minVector(Vector v1, Vector v2) 
+	
+	public static SolucionEjercicio1 minVector(SolucionEjercicio1 s1, SolucionEjercicio1 s2) 
 	{
-		return v1.getDistancia() < v2.getDistancia() ? v1 : v2;
+		return s1.getVector() < s2.getVector() ? s1 : s2;
 	}
 
 	public static Punto[] ObtenerSecuencia() 
@@ -108,7 +100,5 @@ public class Algoritmo {
 		});
 		return p;
 	}
-	
-	
 
 }

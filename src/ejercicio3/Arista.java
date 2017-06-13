@@ -1,9 +1,9 @@
 package ejercicio3;
 
 public class Arista {
-Vertice origen;
-Vertice destino;
-int peso;
+private Vertice origen;
+private Vertice destino;
+private int peso;
 
 
 public Arista(Vertice origen, Vertice destino, int peso) {
