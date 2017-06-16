@@ -4,10 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import ejercicio2.SolucionEjercicio2;
-import ejercicio2.TPEjercicio2;
-import ejercicio2.Tarea;
-
 public class TestEjercicio4 {
 
 	@Test
