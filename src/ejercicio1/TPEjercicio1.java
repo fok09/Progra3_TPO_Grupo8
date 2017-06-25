@@ -66,15 +66,7 @@ public class TPEjercicio1 {
 		return V;
 	}
 
-	public static Punto[] OrdernarPuntosX(Punto[] p) 
-	{
-		Arrays.sort(p, new Comparator<Punto>() {
-			public int compare(Punto p1, Punto p2) {
-				return p1.getX()-p2.getX();
-			}
-		});
-		return p;
-	}
+	
 	
 	public static Punto[] OrdernarPuntosY(Punto[] p) 
 	{
