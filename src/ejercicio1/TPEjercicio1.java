@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Main {
+public class TPEjercicio1 {
 
 	public static SolucionEjercicio1 Ejercicio1(Punto[] p) {
 		
@@ -51,20 +51,6 @@ public class Main {
 		return s1.getVector() < s2.getVector() ? s1 : s2;
 	}
 
-	public static Punto[] ObtenerSecuencia() 
-	{
-		Punto[] p = new Punto[10];
-		
-		
-		for(int i = 0 ; i<10 ; i++)
-		{
-			Double x = Math.random()*100;
-			Double y = Math.random()*100;
-			p[i] = new Punto(x.intValue(),y.intValue()); 
-		}
-		return p;
-	}
-	
 	public static Vector FuerzaBruta(Punto[] sp) {
 		int infPos = (int) Double.POSITIVE_INFINITY;
 		Vector V = new Vector(new Punto(infPos, infPos), new Punto(0, 0));
@@ -84,7 +70,6 @@ public class Main {
 	{
 		Arrays.sort(p, new Comparator<Punto>() {
 			public int compare(Punto p1, Punto p2) {
-				// TODO Auto-generated method stub
 				return p1.getX()-p2.getX();
 			}
 		});

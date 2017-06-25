@@ -2,16 +2,7 @@ package ejercicio3;
 
 import java.util.*;
 
-public class Main {
-
-	public static void main(String[] args)
-	{
-		Grafo G = GenerarGrafo();
-		
-		SolucionEjercicio3 S = Ejercicio3(G);
-		
-		System.out.println(String.format("Acumulado: %d - instrucciones: %d",S.aristaSum,S.instrucciones));
-	}
+public class TpEjercicio3 {
 	
 	public static SolucionEjercicio3 Ejercicio3(Grafo G)
 	{
@@ -69,21 +60,5 @@ public class Main {
 		
 	}
 
-	private static Grafo GenerarGrafo()
-	{
-		Grafo G = new Grafo();
-		
-		G.getVertice().add(new Vertice("A"));
-		G.getVertice().add(new Vertice("B"));
-		G.getVertice().add(new Vertice("C"));
-		G.getVertice().add(new Vertice("D"));
-		
-		G.getAristas().add(new Arista(new Vertice("A"),new Vertice("B"),10));
-		G.getAristas().add(new Arista(new Vertice("A"),new Vertice("D"),5));
-		G.getAristas().add(new Arista(new Vertice("A"),new Vertice("C"),6));
-		G.getAristas().add(new Arista(new Vertice("B"),new Vertice("D"),15));
-		G.getAristas().add(new Arista(new Vertice("D"),new Vertice("C"),4));
-		
-		return G;
-	}
+	
 }
