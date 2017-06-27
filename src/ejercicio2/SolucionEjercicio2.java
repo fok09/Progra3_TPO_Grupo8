@@ -1,11 +1,5 @@
 package ejercicio2;
 
-import java.util.Arrays;
-import java.util.Comparator;
-
-import ejercicio1.Punto;
-import ejercicio1.Vector;
-
 public class SolucionEjercicio2 {
 	int tareas;
 	int instrucciones;

@@ -35,14 +35,14 @@ public class TpEjercicio5
 			return Sol;
 		}
 		
-		private static ElementoMochilaDyn[] OrdenarElementos(ElementoMochilaDyn[] e) {
-			
-			Arrays.sort(e, new Comparator<ElementoMochilaDyn>() {
-				public int compare(ElementoMochilaDyn e1, ElementoMochilaDyn e2) {
-					return e1.getPeso() - e2.getPeso();
-				}
-			});
-			
-			return e;
-		}
+//		private static ElementoMochilaDyn[] OrdenarElementos(ElementoMochilaDyn[] e) {
+//			
+//			Arrays.sort(e, new Comparator<ElementoMochilaDyn>() {
+//				public int compare(ElementoMochilaDyn e1, ElementoMochilaDyn e2) {
+//					return e1.getPeso() - e2.getPeso();
+//				}
+//			});
+//			
+//			return e;
+//		}
 }
